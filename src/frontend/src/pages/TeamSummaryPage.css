@@ -1,0 +1,43 @@
+.TeamSummaryPage {
+  color: ghostwhite;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(2rem, 1fr));
+  grid-template-rows: 0.5fr 1fr 0.75fr;
+  grid-template-areas:
+    "header header header header"
+    "detail detail detail chart"
+    "small small small more";
+
+  grid-gap: 20px;
+  padding: 10px;
+  /* margin: 10px; */
+}
+
+.team-header {
+  grid-area: header;
+  justify-content: center;
+  padding: 20px 0 0px;
+  font-size: 2rem;
+}
+
+.more {
+  grid-area: more;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+}
+
+.pie-chart {
+  grid-area: chart;
+  max-width: 200px;
+  justify-items: center;
+  align-self: center;
+  text-align: center;
+}
+
+/* @media only screen and (max-width: 500px) {
+  .TeamSummaryPage {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+} */

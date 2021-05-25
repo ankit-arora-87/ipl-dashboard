@@ -2,7 +2,7 @@ package com.learncodetogether.ipldashboard.service.implementations;
 
 import com.learncodetogether.ipldashboard.model.Match;
 import com.learncodetogether.ipldashboard.model.Team;
-import com.learncodetogether.ipldashboard.repository.MatchRepositoryInerface;
+import com.learncodetogether.ipldashboard.repository.MatchRepository;
 import com.learncodetogether.ipldashboard.repository.TeamRepositoryInterface;
 import com.learncodetogether.ipldashboard.service.TeamServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,12 @@ public class TeamService implements TeamServiceInterface {
     private TeamRepositoryInterface teamRepositoryInterface;
 
     @Autowired
-    private MatchRepositoryInerface matchRepositoryInerface;
+    private MatchRepository matchRepositoryInterface;
+
+    @Override
+    public List<Team> getTeams() {
+        return (List<Team>) this.teamRepositoryInterface.findAll();
+    }
 
     @Override
     public Team getTeam(String name) {
@@ -26,7 +31,7 @@ public class TeamService implements TeamServiceInterface {
 
     @Override
     public List<Match> getLatestMatches(String name, int size) {
-        return this.matchRepositoryInerface.getLatestMatchesByTeamName(name, size);
+        return this.matchRepositoryInterface.getLatestMatchesByTeamName(name, size);
     }
 
 }

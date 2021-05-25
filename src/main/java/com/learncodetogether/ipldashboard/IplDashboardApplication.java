@@ -2,8 +2,10 @@ package com.learncodetogether.ipldashboard;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = {"com.learncodetogether.ipldashboard"})
 public class IplDashboardApplication {
 
 	public static void main(String[] args) {

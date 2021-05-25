@@ -6,6 +6,9 @@ import com.learncodetogether.ipldashboard.model.Team;
 import java.util.List;
 
 public interface TeamServiceInterface {
+
+    List<Team> getTeams();
+
     Team getTeam(String name);
 
     List<Match> getLatestMatches(String name, int size);

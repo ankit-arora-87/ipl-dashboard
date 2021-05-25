@@ -1,0 +1,63 @@
+.MatchPage {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(2rem, 1fr));
+  grid-template-areas:
+    "header year team result"
+    "small small small small";
+  grid-gap: 20px;
+  padding: 10px;
+  margin: 5px;
+  color: ghostwhite;
+}
+
+.team-header {
+  grid-area: header;
+  justify-content: left;
+  padding: 20px 0 0px;
+}
+
+.SearchFilters {
+  grid-area: filters;
+  padding: 10px 0 0px;
+  color: ghostwhite;
+}
+
+#result {
+  grid-area: result;
+}
+#year {
+  grid-area: year;
+}
+#team {
+  grid-area: team;
+}
+
+.SearchFilters > h2 {
+  text-align: right;
+}
+
+.SearchFilters > select {
+  width: 200px;
+}
+
+.SearchFilters > ol > li {
+  padding: 10px 0 0px;
+}
+
+.small-cards {
+  grid-area: small;
+  justify-content: center;
+  padding: 20px 0 0px;
+}
+
+.no-result {
+  color: ghostwhite;
+  text-align: center;
+}
+
+/* @media only screen and (max-width: 550px) {
+    .MatchPage {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  } */

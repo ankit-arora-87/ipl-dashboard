@@ -16,6 +16,6 @@ public class DashboardService implements DashboardServiceInterface {
 
     @Override
     public List<Match> getMatches(int page, int size) {
-        return dashboardRepoInterface.getMatches(page, size);
+        return this.dashboardRepoInterface.getMatches(page, size);
     }
 }

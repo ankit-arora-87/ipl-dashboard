@@ -9,13 +9,16 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/dashboard")
+@CrossOrigin
 public class DashboardController {
 
     @Autowired
     DashboardServiceInterface dashboardServiceInterface;
 
     @GetMapping
-    public List<Match> matches(@RequestParam int page, @RequestParam int size){
+    public List<Match> matches(
+            @RequestParam(required = false, defaultValue = "1") int page,
+            @RequestParam(required = false, defaultValue = "10") int size){
         return dashboardServiceInterface.getMatches(page, size);
     }
 }

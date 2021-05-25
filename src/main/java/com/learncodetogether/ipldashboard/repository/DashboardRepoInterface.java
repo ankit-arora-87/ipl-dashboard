@@ -15,7 +15,7 @@ public interface DashboardRepoInterface extends JpaRepository<Match, Long> {
 
     default List<Match> getMatches(int page, int size) {
         Pageable pageable = PageRequest.of(page, size);
-        return (List<Match>) this.findAll();
+        return (List<Match>) this.findAll(pageable);
 
     }
 

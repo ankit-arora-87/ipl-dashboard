@@ -1,0 +1,62 @@
+.team-header {
+  grid-area: team-header;
+}
+.MatchDetailCard {
+  grid-area: detail-card;
+}
+.MatchSmallCard {
+  grid-area: small-card;
+}
+
+.TeamPage {
+  color: ghostwhite;
+  display: grid;
+  grid-template-areas:
+    "team-header team-header team-header team-header"
+    "detail-card detail-card detail-card detail-card"
+    "small-card small-card small-card small-card";
+  grid-gap: 20px;
+  padding: 10px;
+}
+
+.TeamPage > .MatchDetailCard {
+  /* margin: 20px auto; */
+  /* border: 1px solid #ccc; */
+  width: 1200px;
+  /* justify-self: center; */
+  /* text-align: center; */
+  background-color: green;
+  padding: 20px;
+}
+
+.TeamPage .small-card-container {
+  width: 1240px;
+  float: left;
+}
+.TeamPage .MatchSmallCard {
+  margin: 20px 5px 5px 0px;
+  border: 1px solid #ccc;
+  width: 380px;
+  height: 200px;
+
+  /* justify-self: center; */
+  /* text-align: center; */
+  /* background-color: green; */
+  float: left;
+  padding: 10px;
+}
+
+.team-header {
+  color: ghostwhite;
+  justify-content: center;
+  /* text-align: center; */
+  padding: 20px 0 0px;
+}
+
+.won {
+  background-color: rgb(223, 32, 74);
+}
+
+.lost {
+  background-color: green;
+}

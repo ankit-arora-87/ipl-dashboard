@@ -1,0 +1,8 @@
+.MatchSmallCard :in-range {
+  grid-area: small;
+}
+
+.MatchSmallCard {
+  padding: 20px;
+  margin-top: 5px;
+}
