@@ -3,7 +3,7 @@ import { TeamSummaryPage } from "./pages/TeamSummaryPage";
 import { MatchPage } from "./pages/MatchPage";
 import { TeamsPage } from "./pages/TeamsPage";
 import { Nav } from "./components/Nav";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (

@@ -54,7 +54,7 @@ public class MatchCustomRepositoryImpl implements MatchCustomRepository {
 
         System.out.println("Year Predicate: " +finalPredicate);
 
-        if(againstTeam != null){
+        if(!againstTeam.equalsIgnoreCase("all")){
             Predicate predicateForTeam1AgainstTeam
                     = cb.equal(match.get("team2"), againstTeam);
             Predicate predicateForTeam2AgainstTeam
@@ -66,7 +66,7 @@ public class MatchCustomRepositoryImpl implements MatchCustomRepository {
 
         }
         System.out.println();
-        if(!matchResult.equalsIgnoreCase("all")){
+        if(matchResult.equalsIgnoreCase("won") || matchResult.equalsIgnoreCase("lost")){
             Predicate matchResultPredicate = null;
             if(matchResult.equalsIgnoreCase("won")){
                 matchResultPredicate = cb.equal(match.get("winner"), name);

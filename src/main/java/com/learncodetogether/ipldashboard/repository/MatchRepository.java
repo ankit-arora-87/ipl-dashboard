@@ -14,6 +14,7 @@ import java.util.List;
 
 @Repository
 public interface MatchRepository extends CrudRepository<Match, Long>, JpaSpecificationExecutor<Match> {
+//public interface MatchRepository extends CrudRepository<Match, Long>, MatchCustomRepository {
 
     // getByField1OrField2Or.... Fetch list of matches where field1 = ? OR field2 = ?...
     List<Match> getByTeam1OrTeam2OrderByDateDesc(String team1, String team2, Pageable pageable);
