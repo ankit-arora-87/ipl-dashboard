@@ -1,6 +1,7 @@
-package com.learncodetogether.ipldashboard.repository;
+package com.learncodetogether.ipldashboard.repository.implementations;
 
 import com.learncodetogether.ipldashboard.model.Match;
+import com.learncodetogether.ipldashboard.repository.MatchCustomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.EntityManager;
